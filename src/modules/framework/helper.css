@@ -1,0 +1,108 @@
+/* Semantic class to clear floated children */
+.group
+{
+	@mixin clear_floated_children(true);
+}
+
+/* for image replacement */
+.image-replace
+{
+	display: block;
+	text-indent: -9999em;
+	overflow: hidden;
+  	background-repeat: no-repeat; 
+	text-align: left; 
+	direction: ltr; 
+}
+
+/* Hide for both screenreaders and browsers
+   css-discuss.incutio.com/wiki/Screenreader_Visibility */
+.hidden
+{
+	display:none;
+	visibility: hidden;
+} 
+
+/* Hide only visually, but have it available for screenreaders 
+   www.webaim.org/techniques/css/invisiblecontent/ 
+   Solution from: j.mp/visuallyhidden - Thanks Jonathan Neal! */
+.visuallyhidden 
+{
+	position: absolute !important;    
+  	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  	clip: rect(1px, 1px, 1px, 1px);
+}
+
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible
+{
+	visibility: hidden;
+}
+
+/* Surround uppercase words and abbreviations with this class.
+Based on work by Jørgen Arnor Gårdsø Lom [http://twistedintellect.com/] */
+.small-caps
+{ 
+	font-variant: small-caps; 
+	letter-spacing: 1px; 
+	text-transform: lowercase; 
+	font-size:1.2em;
+	line-height:1%;
+	font-weight:bold;
+	padding:0 2px;
+}
+
+ /**
+ * Sharpen an image if it has become blurry due to upscaling or downscaling
+ * Useful mainly in flat color images
+ * @see https://developer.mozilla.org/en/CSS/image-rendering
+ */
+.image-sharpen
+{
+	image-rendering:-moz-crisp-edges;
+	-ms-interpolation-mode:nearest-neighbor;  /* IE 7+ */
+}
+
+/**
+ * When photos are upscaled or downscaled, they often get blurry. Don't use
+ * this on flat color images, they will still appear blurry.
+ * Use the +sharpen mixin instead. 
+ * @see https://developer.mozilla.org/en/CSS/image-rendering
+ */
+.image-high-quality
+{
+	image-rendering:optimizeQuality;
+	-ms-interpolation-mode:bicubic;  /* IE 7+ */
+}
+
+/**
+ * Optimizes the rendering on images so they
+ * appear faster, but at a lower quality. Useful for <video>
+ */
+.image-low-quality
+{
+	image-rendering:optimizeSpeed;
+}
+
+/* Resets the box model on an element */
+.reset_box
+{
+	margin:0;
+	padding:0;
+	border:0;
+}
+
+/* Makes a list block inline */
+.inline-list
+{
+	@include clear_floated_children;
+	@extend .reset_box;
+	
+	li
+	{
+		list-style-type:none;
+		margin-left:0;
+		float:left;
+		white-space:nowrap;
+	}
+}

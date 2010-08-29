@@ -1,0 +1,172 @@
+body,
+input,
+label,
+select,
+button,
+textarea,
+table
+{
+	  font-size: type.size;
+	font-family: type.family;
+	line-height: type.baseline;
+	      color: color.text;
+}
+
+/* Text Selection
+-----------------------------------------------*/
+
+/* These ::selection declarations have to be separate. 
+   They cause the browsers to freak out. */
+   
+@mixin selection
+{
+	 background: color.selection;
+	      color: color.selection_text;
+	text-shadow: none;
+}
+
+::-moz-selection { @include selection; }
+::selection { @include selection; }
+
+/* Blocks
+-----------------------------------------------*/
+
+elements.type_block
+{
+	margin:0 0 type.baseline 0;	
+}
+
+address
+{
+	
+}
+
+/* Lists
+-----------------------------------------------*/
+
+ul
+{
+	
+}
+
+ol
+{
+	
+}
+
+li
+{
+	
+}
+
+dl
+{
+	
+}
+
+dt
+{
+	
+}
+
+dd
+{
+	
+}
+
+/* Code
+-----------------------------------------------*/
+
+pre
+{
+	
+}
+
+/* Headings
+-----------------------------------------------*/
+
+elements.headings
+{
+	
+}
+
+h1
+{
+	
+}
+
+h2
+{
+	
+}
+
+h3
+{
+	
+}
+
+h4
+{
+	
+}
+
+h5
+{
+	
+}
+
+h6
+{
+	
+}
+
+/* Inline
+-----------------------------------------------*/
+
+em
+{
+	
+}
+
+strong
+{
+	
+}
+
+mark
+{
+	
+}
+
+ins
+{
+	
+}
+
+del
+{
+	
+}
+
+abbr
+{
+	
+}
+
+/* Links
+-----------------------------------------------*/
+
+a
+{
+	
+}
+
+a:visited
+{
+	
+}
+
+a:hover
+{
+	
+}

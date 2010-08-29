@@ -1,0 +1,36 @@
+@mixin hasLayout
+{
+	zoom:1;
+}
+
+@mixin inline-block
+{
+	@include hasLayout;
+	display:inline; 
+	display:-moz-inline-box; 
+	display:inline-block; 
+	vertical-align:top;
+}
+
+@mixin clear_floated_children($after = false)
+{
+	@if $after == false
+	{
+		overflow:hidden;
+	}
+	@else
+	{
+		@include hasLayout;
+		display:block;
+		
+		&:after 
+		{
+			content:'\\0020';
+			display:block;
+			height:0;
+			clear:both;
+			visibility:hidden;
+			font-size:0;
+		}
+	}
+}

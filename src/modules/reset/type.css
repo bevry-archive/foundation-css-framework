@@ -1,0 +1,111 @@
+body
+{
+	font:100%/1 georgia,serif;
+}
+
+:focus
+{
+	outline:0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+{
+	/* http://www.aestheticallyloyal.com/public/optimize-legibility/ */
+	text-rendering:optimizeLegibility;
+	
+	/* http://files.christophzillgens.com/webkit-font-smoothing.html */
+	-webkit-font-smoothing:subpixel-antialiased;
+}
+
+a,
+abbr,
+acronym,
+address,
+b,
+blockquote,
+caption,
+cite,
+code,
+code,
+dd,
+del,
+dfn,
+dl,
+dt,
+em,
+figcaption,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+i,
+ins,
+kbd,
+li,
+mark,
+ol,
+p,
+pre,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+th,
+time,
+tt,
+ul,
+var
+{
+	font-size:100%;
+	font-style:normal;
+	font-weight:normal;
+	font-variant:normal;
+	vertical-align:baseline;
+	margin:0;
+	outline:0;
+	padding:0;
+	border:0;
+	background:transparent;
+}
+
+li
+{
+	list-style:none;
+}
+
+blockquote:before, 
+blockquote:after,
+q:before, 
+q:after 
+{ 
+	content:'';
+	content:none;
+}
+
+sup 
+{
+	vertical-align:text-top;
+}
+
+sub 
+{
+	vertical-align:text-bottom;
+}
+
+pre,
+code,
+kbd,
+samp,
+tt 
+{
+	font-family:monospace;
+}

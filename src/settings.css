@@ -1,0 +1,25 @@
+@variables
+{
+	
+}
+
+@variables type
+{
+	family:font.georgia;
+	size:16px;
+	baseline:1.3em;
+}
+
+@variables layout
+{
+	columns:12;
+	column_width:4em;
+	gutter_width:1em;
+}
+
+@variables color
+{
+	text:#444;
+	selection_text:#fff;
+	selection:#000;
+}

@@ -1,0 +1,36 @@
+@variables elements
+{
+	block:				div;
+	inline:				span;
+	type_blocks:		blockquote,p,ul,ol,dl;
+	type:				em,strong,mark,ins,del,abbr,acronym,b,sub,sup,time;
+	headings:			h1,h2,h3,h4,h5,h6;
+	html5_blocks:		article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section;
+	html5_inline:		mark,time;
+	sectioning:			article,section;
+	preformatted:		pre,code;
+}
+
+@variables font
+{
+	georgia:			Georgia,serif,sans-serif;
+	times:				Times,Times New Roman,Georgia,serif;
+	helvetica:			"Helvetica Neue", Helvetica, Arial, sans-serif;
+	myriad:				"Myriad Pro", "MyriadPro", Myriad, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	baskerville:		Baskerville, Times New Roman, Times, serif;
+	cambria:			Cambria, Georgia, Times, Times New Roman, serif;
+	century_gothic:		Century Gothic, Apple Gothic, sans-serif;
+	monospace:			Consolas, Lucida Console, Monaco, monospace;
+	franklin_gothic:	Franklin Gothic Medium, Arial Narrow Bold, Arial, sans-serif;
+	futura:				Futura, Century Gothic, AppleGothic, sans-serif;
+	garamond:			Garamond, Hoefler Text, Times New Roman, Times, serif;
+	geneva:				Geneva, Verdana, Lucida Sans, Lucida Grande, Lucida Sans Unicode, sans-serif;
+	verdana:			Verdana, Lucida Sans, Lucida Grande, Lucida Sans Unicode, sans-serif;
+	lucida:				Lucida Grande, Lucida Sans, Lucida Sans Unicode, sans-serif;
+	gill_sans:			"Gill Sans", Calibri, Trebuchet, sans-serif;
+	impact:				Impact, Haettenschweiler, Arial Narrow Bold, sans-serif;
+	palatino:			Palatino, Palatino Linotype, Hoefler Text, Times, Times New Roman, serif;
+	tahoma:				Tahoma, Geneva, Verdana, sans-serif;
+	trebuchet:			'Trebuchet MS', Tahoma, Arial, sans-serif;
+	warnock:			"Warnock Pro", "Goudy Old Style","Palatino","Book Antiqua", Georgia, serif;
+}

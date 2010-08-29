@@ -1,0 +1,40 @@
+html 
+{ 
+	/* always force a scrollbar in non-IE */ 
+	overflow-y: scroll;
+}
+
+article, 
+aside, 
+details, 
+figcaption, 
+figure,
+footer, 
+header, 
+hgroup, 
+menu, 
+nav, 
+section 
+{ 
+    display:block;
+}
+
+body
+{
+	margin:0;
+	padding:0;
+}
+
+img 
+{
+	border:0;
+	-ms-interpolation-mode: bicubic;
+}
+
+/* fluid images and objects */
+img,
+object,
+embed
+{
+	max-width:100%;
+}

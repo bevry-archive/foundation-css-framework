@@ -1,0 +1,28 @@
+table 
+{
+	border-collapse:collapse;
+	border-spacing:0;
+	font-size:inherit;
+	font:100%;
+}
+
+th,
+td 
+{
+	margin:0;
+	padding:0;
+}
+
+caption,
+th 
+{
+	text-align:left;
+}
+
+td,
+th,
+th img,
+td img
+{
+	vertical-align:top;
+} 

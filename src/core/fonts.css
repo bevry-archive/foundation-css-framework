@@ -1,0 +1,11 @@
+/*- Paul Irish's Bulletproof @font-face syntax: http://mky.be/font-face/bulletproof/ */
+
+@font-face 
+{
+	font-family:'Graublau Web';
+	src:url('../assets/fonts/GraublauWeb/GraublauWeb.eot');
+	src:
+	  	local('☺'),
+		url('../assets/fonts/GraublauWeb/GraublauWeb.woff') format('woff'), 
+		url('../assets/fonts/GraublauWeb/GraublauWeb.ttf') format('truetype');
+}

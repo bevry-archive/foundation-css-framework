@@ -1,0 +1,46 @@
+# allow access from all domains for webfonts
+# alternatively you could only whitelist
+#   your subdomains like "sub.domain.com"
+<FilesMatch "\.(ttf|otf|eot|woff|font.css)$">
+	<IfModule mod_headers.c>
+		Header set Access-Control-Allow-Origin "*"
+	</IfModule>
+</FilesMatch>
+
+# Proper svg serving. Required for svg webfonts on iPad
+AddType image/svg+xml svg svgz 
+AddEncoding gzip svgz
+
+# Webfonts
+AddType application/vnd.ms-fontobject eot
+AddType font/ttf                      ttf
+AddType font/otf                      otf
+AddType font/woff                     woff
+
+# GZip compression.
+<IfModule mod_deflate.c>
+	AddOutputFilterByType DEFLATE text/css 
+	<FilesMatch "\.(ttf|otf|eot|svg)$" >
+		SetOutputFilter DEFLATE
+	</FilesMatch>
+</IfModule>
+
+# these are pretty far-future expires headers
+# they assume you control versioning with cachebusting query params like
+#   <script src="application.js?20100608">
+# additionally, consider that outdated proxies may miscache 
+#   www.stevesouders.com/blog/2008/08/23/revving-filenames-dont-use-querystring/
+
+# if you don't use filenames to version, lower the css and js to something like
+#   "access plus 1 week" or so
+
+<IfModule mod_expires.c>
+	Header set cache-control: public
+	ExpiresActive on
+	ExpiresDefault "access plus 1 month"
+</IfModule>
+	
+# Since we're sending far-future expires, we don't need ETags for
+# static content.
+#   developer.yahoo.com/performance/rules.html#etags
+FileETag None
